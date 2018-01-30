@@ -223,6 +223,12 @@
                                             <span>更新日志</span>
                                         </a>
                                     </li>
+                                    <li>
+                                        <a href="#yujianwenti">
+                                            <i class="fa fa-history" aria-hidden="true"></i>
+                                            <span>遇到的问题</span>
+                                        </a>
+                                    </li>
                                     <li class="title">
                                         <h6 style="text-transform: none">&copy;Copyright 2018 Nocti</h6> 
                                     </li>
@@ -298,22 +304,22 @@
                         <div class="col-md-12">
                             <section class="panel panel-featured panel-featured-primary">
                                 <header class="panel-heading">
-                                    <h2 class="panel-title">Prepare Installation</h2>
+                                    <h2 class="panel-title">安装的准备阶段</h2>
                                 </header>
                                 <div class="panel-body">
                                     <ol>
-                                        <li>We recommend you to duplicate your live store on a development store and try installation on it in advance.</li>
-                                        <li>Backup magento files and the store database.</li>
+                                        <li>先确定主题是针对哪个magento版本的，magento的分水岭是magento1.x和magento2.x，通常在我们选择主题的时候就应该确定好这个是magento1.x的还是magento2.x的主题.</li>
+                                        <li>主题的文件的完整性检查，有的主题可能不完整或者是说一个主题必要的配置文件是否缺失，这样的话会可以在安装前就排查好，避免安装后再排查，增加了难度.</li>
                                         <div class="alert alert-warning margin-top-bottom-5">
-                                            <h4><i class="fa fa-warning"></i> Important!</h4>
-                                            It's very important to backup all of themes and extensions in Magento before installation, especially when you are working on a live server. We strongly recommend you to do not omit this step.
+                                            <h4><i class="fa fa-warning"></i> 重要提示!</h4>
+                                            确定主题是快速安装包那种还是只是主题安装包，快速安装包是包含了magento系统文件的，简单的说就是包含了整个源码的安装包，这种情况的话，那么直接把这个安装包放在web服务器的根目录下，然后运行安装即可；如果是单纯的主题文件，也就是一个主题而已，那么就要把这个主题文件放在主题该放的目录下，这个目录位置不同的magneto版本事不一样的，这里说的不同的magento版本是指magento1.x和magento2.x的区别.
                                         </div>
-                                        <li>Enable all caches in your magento.</li>
+                                        <li>启用缓存</li>
                                         <div class="alert alert-warning margin-top-bottom-5">
-                                            <h4><i class="fa fa-warning"></i> Important!</h4>
-                                            It's very important to enable the caches, Because, sometimes, some of the extensions of the theme were installed incorrectly. So you should enable the caches during upload the theme files, then you should disable or clear the caches, when complete to upload the theme files.
+                                            <h4><i class="fa fa-warning"></i> 重要提示!</h4>
+                                            magento的缓存是很重要的，这个跟wordpress很不一样，虽然wordpress也有缓存插件，但是有不一样的理解，当我们安装完了主题后，可能不会马上出现我们想要的效果，这个时候怎么办，虽然还没有立即生效有很多原因，但是很多时候是我们没有清除缓存，我们可以在magento后台找到缓存管理，然后清除缓存，然后再次查看.
                                         </div>
-                                        <li>Upload the theme files.(refer Next Part <b>Theme Files Upload</b>)</li>
+                                        <li>上传主题文件，如果我们在本地服务器调试那么只需要把文件放在.(refer Next Part <b>Theme Files Upload</b>)</li>
                                         <li>Disable compilation mode in System > Tools > Compilation.</li>
                                         <li>Disable all cache related section that you have in your magento.</li>
                                         <div class="alert alert-warning margin-top-bottom-5">
@@ -2470,6 +2476,626 @@
                         <li>+ Optimized products list for filterproducts block and category view page.</li>
 						<li>+ Removed popular tags block from left sidebar.</li>
 						<li>+ Added toolbar in dailydeal page.</li>
+                                    </ul>
+                                </div>
+                            </section>
+                            <section class="toggle">
+                                <label></i>Porto eCommerce 2.0.0.1 (12.25.2015)</label>
+                                <div class="toggle-content">
+                                    <h4>Fixed Features</h4>
+                                    <ul class="ul-table">
+                        <li>- Removed Smartwave_Blog Extension on 1.x version.</li>
+                        <li>- Minor CSS Style issues.</li>
+                                    </ul>
+                                </div>
+                            </section>
+                            <section class="toggle">
+                                <label></i>Porto eCommerce 2.0.0.0 (12.23.2015)</label>
+                                <div class="toggle-content">
+                                    <h4>Fixed Features</h4>
+                                    <ul class="ul-table">
+                        <li>- 404 error in Add a Deal page on the admin.</li>
+                        <li>- Price slider was not working on search result page.</li>
+                                    </ul>
+                                    <h4>Added and Updated Features</h4>
+                                    <ul class="ul-table">
+                        <li>+ Magento 2.0 Ready! (Starts with only 4 demos from 1.x version.)</li>
+                                    </ul>
+                                </div>
+                            </section>
+                            <section class="toggle">
+                                <label></i>Porto eCommerce 1.6.3 (11.27.2015)</label>
+                                <div class="toggle-content">
+                                    <h4>Fixed Features</h4>
+                                    <ul class="ul-table">
+                        <li>- Blog admin page css file missing issue.</li>
+                        <li>- Theme Design Settings were not affected for Header type 12.</li>
+                        <li>- PHP errors from some template files.</li>
+                        <li>- Social Icons on product review page.</li>
+                        <li>- Swapped product image's size was different, when select swatches.</li>
+                        <li>- Footer newsletter input box style issue.</li>
+                        <li>- My wishslist table style issue on safari.</li>
+                        <li>- View order page table style issue on mobile devices.</li>
+                                    </ul>
+                                    <h4>Added and Updated Features</h4>
+                                    <ul class="ul-table">
+                        <li>+ Fully Compatible with SUPEE-6788 security patch and Magento 1.9.2.2.</li>
+                        <li>+ Thumbnail Images for grouped product items.</li>
+                        <li>+ Rating stars for Richsnippets.</li>
+                                    </ul>
+                                </div>
+                            </section>
+                            <section class="toggle">
+                                <label></i>Porto eCommerce 1.6.2.1 (11.1.2015)</label>
+                                <div class="toggle-content">
+                                    <h4>Fixed Features</h4>
+                                    <ul class="ul-table">
+                        <li>- Add Deal Page on the admin panel.</li>
+                                    </ul>
+                                    <h4>Added and Updated Features</h4>
+                                    <ul class="ul-table">
+                        <li>+ Compatible with magento 1.9.2.2.</li>
+                                    </ul>
+                                </div>
+                            </section>
+                            <section class="toggle">
+                                <label></i>Porto eCommerce 1.6.2 (10.2.2015)</label>
+                                <div class="toggle-content">
+                                    <h4>Fixed Features</h4>
+                                    <ul class="ul-table">
+                        <li>- Couldn't remove the scheduled deals.</li>
+                        <li>- Masonry grid worked incorrectly on home version 18.</li>
+                        <li>- Catalog Search Result page with full width layout.</li>
+                        <li>- PHP fatal error in the right side of the product detail page without zeon manufacturer extension.</li>
+                        <li>- Configurable Swatche selection image overrided with vertical image gallery in the product detail page on mozilla.</li>
+                        <li>- Track Shipment page styles.
+                        <li>- Minor CSS Style issues.</li>
+                                    </ul>
+                                    <h4>Added and Updated Features</h4>
+                                    <ul class="ul-table">
+                        <li>+ Demo 4 - Removed parallax background newsletter</li>
+                        <li>+ Demo 4 - Improved some image blocks</li>
+                        <li>+ Added an option for hide menu item in the manage categories page for megamenu.</li>
+                        <li>+ Updated google richsnippet with rating star.</li>
+                                    </ul>
+                                </div>
+                            </section>
+                            <section class="toggle">
+                                <label></i>Porto eCommerce 1.6.1 (9.5.2015)</label>
+                                <div class="toggle-content">
+                                    <h4>Fixed Features</h4>
+                                    <ul class="ul-table">
+                        <li>- Addtocart button was not working, when disable the ajaxcart on the category view pages.</li>
+                        <li>- The page was broken, when remove the products from the compare popup.</li>
+                        <li>- My downloadable products page was broken.</li>
+                        <li>- PHP error in the daily deal sidebar block.</li>
+                        <li>- Sticky header was moved, when fancybox was opened.</li>
+                        <li>- Duplicated logo image in the sticky header, when enable the full page ajax.</li>
+                        <li>- Product image zoom was not working, when select the configurable swatches.</li>
+                        <li>- Sticky breadcrumb was broken with header type 12, when scrolling page.</li>
+                        <li>- Megamenu links with SSL.</li>
+                        <li>- Minor CSS Style issues.</li>
+                                    </ul>
+                                    <h4>Added and Updated Features</h4>
+                                    <ul class="ul-table">
+                        <li>+ Added Demo Version 18.</li>
+                        <li>+ Added Header Type 14.</li>
+                        <li>+ Added brand logo in the right side of the product page, it will need to install the Zeon Shop by Manufacturer extension.</li>
+                        <li>+ Added custom block above of the contacts form.</li>
+                        <li>+ It's able to show only the categories in the side menu.</li>
+                        <li>+ Updated ajax loader for ajax cart and quickview.</li>
+                                    </ul>
+                                </div>
+                            </section>
+                            <section class="toggle">
+                                <label></i>Porto eCommerce 1.6.0 (8.22.2015)</label>
+                                <div class="toggle-content">
+                                    <h4>Fixed Features</h4>
+                                    <ul class="ul-table">
+                        <li>- Removed /app/code/local/Mage/Catalog/Model/Product/Type/Configurable.php</li>
+                        <li>- Megamenu items with float was not working wich has no subcategories.</li>
+                        <li>- Product prices were showing incorrectly in the filterproducts blocks.</li>
+                        <li>- Rating stars were showing incorrectly in the filterproducts blocks.</li>
+                        <li>- Changed Contacts form's title.</li>
+                        <li>- Minor CSS Style issues.</li>
+                                    </ul>
+                                    <h4>Added and Updated Features</h4>
+                                    <ul class="ul-table">
+                        <li>+ Added Demo Version 17.</li>
+                        <li>+ Updated Header Type 13.</li>
+                        <li>+ Added Ajax Infinite Scroll for Category Page.</li>
+                        <li>+ Added an option for showing empty categories in the Megamenu settings.</li>
+                        <li>+ Added an option for show/hide rating stars in the category page.</li>
+                        <li>+ Added an option for show/hide price in the category page.</li>
+                        <li>+ Added an option for show/hide add to buttons in the category page.</li>
+                        <li>+ Added an option for show/hide qty field for simple products in the category page.</li>
+                        <li>+ Added FlexGrid mode for category page and filterproducts blocks.</li>
+                        <li>+ Added an option for change the product image size in the product detail page.</li>
+                        <li>+ Added an option for vertical product thumbnail image gallery in the product detail page.</li>
+                        <li>+ Added an option for change the product tabs type(vertical tabs, accordion) in the product detail page.</li>
+                        <li>+ Added main categories navigation into the left side in the product detail page.</li>
+                        <li>+ Updated Megamenu for showing category icons.</li>
+                        <li>+ Updated Blog Extension for Security.</li>
+                        <li>+ Updated jQuery, jQuery UI, Bootstrap, Fancybox versions with the latest versions.</li>
+                                    </ul>
+                                </div>
+                            </section>
+                            <section class="toggle">
+                                <label></i>Porto eCommerce 1.5.2 (8.2.2015)</label>
+                                <div class="toggle-content">
+                                    <h4>Fixed Features</h4>
+                                    <ul class="ul-table">
+                        <li>- Couldn't open the product detail page, when the parent categories were not assigned.</li>
+                        <li>- Qty changer was not working on quickview for grouped products.</li>
+                        <li>- IWD onepagecheckout extension's Login popup was not working with version 4.0.9.</li>
+                        <li>- Php error from bestseller block.</li>
+                        <li>- No Products was showing, while change the price filter slider.</li>
+                        <li>- Php fatal error, when remove/disable dailydeal extension.</li>
+                        <li>- Multiple Product Images were showing, when select the swatches then resize the window.</li>
+                        <li>- Minor CSS Style issues.</li>
+                                    </ul>
+                                    <h4>Added and Updated Features</h4>
+                                    <ul class="ul-table">
+                        <li>+ Added Header Type 13.</li>
+                        <li>- Removed Smartwave_SharingTool Extension.</li>
+                        <li>+ Added AddThis_SharingTool Extension.</li>
+                        <li>+ Added an option "Float" in Menu Tab on Manage Categories Page.</li>
+                        <li>+ Added an option for adding logo image into the sticky header.</li>
+                        <li>+ It's possible to set the product image's natural width, when "Keep Image Aspect Ratio" to "Yes".</li>
+                        <li>+ Added patch files in the theme package for Magento 1.9.2.</li>
+                                    </ul>
+                                </div>
+                            </section>
+                            <section class="toggle">
+                                <label></i>Porto eCommerce 1.5.1.2 (6.26.2015)</label>
+                                <div class="toggle-content">
+                                    <h4>Fixed Features</h4>
+                                    <ul class="ul-table">
+                        <li>- Catalog Search Result Page shows blank page.</li>
+                                    </ul>
+                                </div>
+                            </section>
+                            <section class="toggle">
+                                <label></i>Porto eCommerce 1.5.1.1 (6.24.2015)</label>
+                                <div class="toggle-content">
+                                    <h4>Fixed Features</h4>
+                                    <ul class="ul-table">
+                        <li>- Catalog Search with multiwebsite issue.</li>
+                        <li>- Home version 2(new) Content was not showing.</li>
+                        <li>- Facebook widget was not working.</li>
+                        <li>- A href link was not working in the product tabs.</li>
+                        <li>- IWD onepagecheckout extension's style issue.</li>
+                        <li>- Minor CSS Style issues.</li>
+                                    </ul>
+                                    <h4>Added and Updated Features</h4>
+                                    <ul class="ul-table">
+                        <li>+ Added an option for change the product page layout.</li>
+                        <li>+ Added an option for show/hide store switcher.</li>
+                                    </ul>
+                                </div>
+                            </section>
+                            <section class="toggle">
+                                <label></i>Porto eCommerce 1.5.1 (6.21.2015)</label>
+                                <div class="toggle-content">
+                                    <h4>Fixed Features</h4>
+                                    <ul class="ul-table">
+                        <li>- Daily Deal timer started immediately whenever.</li>
+                        <li>- Blog pages were redirected to the blog index page on every blog pages and post pages.</li>
+                        <li>- Bestseller block was not working with configurable products.</li>
+                        <li>- Optimized Megamenu extension.</li>
+                        <li>- Product custom tabs were showing, when open the products from homepage, if set it to hidden in the categories.</li>
+                        <li>- Quickview url was not working, sometimes.</li>
+                        <li>- Couldn't change the product price on add to cart sticky, when select the product options.</li>
+                        <li>- Add to links icons were broken on wishlist update page.</li>
+                        <li>- Minor CSS Style issues.</li>
+                                    </ul>
+                                    <h4>Added and Updated Features</h4>
+                                    <ul class="ul-table">
+                        <li>+ Updated Home version 2.</li>
+                        <li>+ Added Dark version.</li>
+                        <li>+ Added an option for newsletter popup with delay.</li>
+                        <li>+ Added an option for showing newsletter popup on every pages.</li>
+                        <li>+ Added an option for hide small thumbnail image, when the product has one image.</li>
+                        <li>+ Added compare product list popup.</li>
+                        <li>+ Added an option for disable responsive mode.</li>
+                                    </ul>
+                                </div>
+                            </section>
+                            <section class="toggle">
+                                <label></i>Porto eCommerce 1.5.0 (6.6.2015)</label>
+                                <div class="toggle-content">
+                                    <h4>Fixed Features</h4>
+                                    <ul class="ul-table">
+                        <li>- Auto Expire for Daily Deal Products.</li>
+                        <li>- Invalid Blog Link in the Top Links.</li>
+                        <li>- Daily Deal Products page Layout.</li>
+                        <li>- Removed Category Navigation on the Category Page for "Is Anchor" is "No".</li>
+                        <li>- Invalid Continue Shopping url, when clear cart on the shopping cart page.</li>
+                        <li>- Right Side Zoom was not working on Magento 1.9.1</li>
+                        <li>- Minor CSS Style issues.</li>
+                                    </ul>
+                                    <h4>Added and Updated Features</h4>
+                                    <ul class="ul-table">
+                        <li>+ Updated Home version 3.</li>
+                        <li>+ Updated Classic Menu Styles.</li>
+                        <li>+ Updated Mobile Menu Styles.</li>
+                        <li>+ Optimized Category page.</li>
+                        <li>+ Added Notice custom block above the header.</li>
+                        <li>+ Added an Option for enable Sticky Header on Mobile.</li>
+                        <li>+ Added Product Sale Label with Discount Percentage.</li>
+                        <li>+ Added more CMS Block Tab for product custom tabs.</li>
+                        <li>+ Added one more custom style field in the theme settings panel.</li>
+                        <li>+ Added translate.csv file in theme's locale directory for translating.</li>
+                                    </ul>
+                                </div>
+                            </section>
+                            <section class="toggle">
+                                <label></i>Porto eCommerce 1.4.3 (5.12.2015)</label>
+                                <div class="toggle-content">
+                                    <h4>Fixed Features</h4>
+                                    <ul class="ul-table">
+                        <li>- Price Slider was not working, after select slider range of no products.</li>
+                        <li>- Minor Daily Deal Styles.</li>
+                        <li>- Aspect Ratio option was not working on filterproducts blocks.</li>
+                        <li>- "scrollToMe" function was not working, when no elements.</li>
+                                    </ul>
+                                    <h4>Added and Updated Features</h4>
+                                    <ul class="ul-table">
+                        <li>+ Added an option for showing category description at the default position.</li>
+                        <li>+ Added menu icon title on mobile resolution.</li>
+                        <li>+ Updated showing 2 columns products on mobile resolution.</li>
+                        <li>+ Upgraded magento version to 1.9.1.1 in the quickstart package.</li>
+                                    </ul>
+                                </div>
+                            </section>
+                            <section class="toggle">
+                                <label></i>Porto eCommerce 1.4.2 (5.5.2015)</label>
+                                <div class="toggle-content">
+                                    <h4>Fixed Features</h4>
+                                    <ul class="ul-table">
+                        <li>- Fatal error is showing in category page, when the site is run in document root or subdirectory.</li>
+                        <li>- Product custom tab issue.</li>
+                        <li>- PHP issue in Product media template.</li>
+                        <li>- Bootstrap Components issue.</li>
+                        <li>- Improved menu position style.</li>
+                        <li>- Fixed minor style issues.</li>
+                                    </ul>
+                                    <h4>Added and Updated Features</h4>
+                                    <ul class="ul-table">
+                        <li>+ Added Daily Deals Extension.</li>
+                        <li>+ Fully compatible with Magento 1.7.</li>
+                                    </ul>
+                                </div>
+                            </section>
+                            <section class="toggle">
+                                <label></i>Porto eCommerce 1.4.1 (4.9.2015)</label>
+                                <div class="toggle-content">
+                                    <h4>Fixed Features</h4>
+                                    <ul class="ul-table">
+                        <li>- When set "Show Custom Tabs" option to YES the custom tabs were not shown.</li>
+                        <li>- Broken product tabs, when set to does not show description tab.</li>
+                        <li>- Mobile nav and Side nav conflicts.</li>
+                        <li>- Broken header type 10 on mobile browsers.</li>
+                        <li>- CAPTCHA forms were not showing, when it's enabled.</li>
+                        <li>- Minor megamenu style issues.</li>
+                                    </ul>
+                                    <h4>Added and Updated Features</h4>
+                                    <ul class="ul-table">
+                        <li>+ Added product image right side zoom type on the Product View Page.</li>
+                        <li>+ Added an option for moving product tabs above of the product price on the Product View Page.</li>
+                        <li>+ Added product add to cart sticky on the Product View Page.</li>
+                        <li>+ Added an option for changing category page layout.</li>
+                        <li>+ Added thumbnail image title on the Product View Page.</li>
+                        <li>+ Added options for changing product label texts - Sale & New.</li>
+                                    </ul>
+                                </div>
+                            </section>
+
+                            <section class="toggle">
+                                <label></i>Porto eCommerce 1.4.0 (3.23.2015)</label>
+                                <div class="toggle-content">
+                                    <h4>Fixed Features</h4>
+                                    <ul class="ul-table">
+                        <li>- Broken product tabs, when set to does not show description tab.</li>
+                        <li>- Wrong quickview url, when add the store code into the url.</li>
+                        <li>- Catalog Search Form Action Url with SSL.</li>
+                        <li>- Multishipping Page Styles.</li>
+                        <li>- Refreshed the page, when input blank into the review form.</li>
+                        <li>- Minor CSS style issues.</li>
+                                    </ul>
+                                    <h4>Added and Updated Features</h4>
+                                    <ul class="ul-table">
+                        <li>+ Added Home Version 15.</li>
+                        <li>+ Added Home Version 16.</li>
+                        <li>+ Added Header Type 12.</li>
+                        <li>+ Added Google Richsnippets.</li>
+                        <li>+ Added Thumbnail Image and Product name for Prev/Next Products.</li>
+                        <li>+ Added the config for show/hide flag image in language selector.</li>
+                                    </ul>
+                                </div>
+                            </section>
+                            <section class="toggle">
+                                <label></i>Porto eCommerce 1.3.2 (3.9.2015)</label>
+                                <div class="toggle-content">
+                                    <h4>Fixed Features</h4>
+                                    <ul class="ul-table">
+                        <li>- Price was showing like "$120,000,000.00" instead of "$120.00" with some locales.</li>
+                        <li>- Unable to set the megamenu columns with 9 - 12.</li>
+                        <li>- Some broken RTL styles.</li>
+                        <li>- Minor CSS style issues.</li>
+                                    </ul>
+                                    <h4>Added and Updated Features</h4>
+                                    <ul class="ul-table">
+                        <li>+ Added Custom Tab on Product page. You can add global tab or custom tab for each category.</li>
+                        <li>+ Upgraded Sticky Header. (Removed duplicated menu block for sticky header.) Theme speed is much higher than before, some styles for sticky header are updated.</li>
+                        <li>+ Moved compare page link in the header.</li>
+                        <li>+ Updated breadcrumbs styles.</li>
+                        <li>+ Updated prev / next product icons in product page.</li>
+                                    </ul>
+                                </div>
+                            </section>
+                            <section class="toggle">
+                                <label></i>Porto eCommerce 1.3.1.1 (2.28.2015)</label>
+                                <div class="toggle-content">
+                                    <h4>Fixed Features</h4>
+                                    <ul class="ul-table">
+                        <li>- Change the deprecated php functions for filterproducts extension, eg: split().</li>
+                        <li>- Some of the products are not showing, when filter with price slider.</li>
+                        <li>- Social pages are loading in current tab, when click footer social icons.</li>
+                        <li>- Faux font bolding on Mozilla, IE, Opera, when change the primary font with google fonts.</li>
+                        <li>- Minor CSS style issues.</li>
+                                    </ul>
+                                </div>
+                            </section>
+                            <section class="toggle">
+                                <label></i>Porto eCommerce 1.3.1 (2.26.2015)</label>
+                                <div class="toggle-content">
+                                    <h4>Fixed Features</h4>
+                                    <ul class="ul-table">
+                        <li>- Some products are not showing when change the price slider on the category page.</li>
+                        <li>- Sub categories list are not showing in the category list dropdown of the searchbox.</li>
+                        <li>- Magento variables doesn't work in the static block for mobile custom menu.</li>
+                        <li>- The rating stars of some of the products are not showing.</li>
+                        <li>- Change the deprecated php functions, eg: split().</li>
+                        <li>- The pages are loaded in quickview popup.</li>
+                        <li>- swatches-product.js file loading issue when disable configurable swatches on magento 1.9.1.</li>
+                        <li>- Product image is not loading when the product has one image on magento 1.9.1.</li>
+                        <li>- Duplicated product images when switch the color swatches on magento 1.9.1.</li>
+                        <li>- Minor CSS style issues.</li>
+                                    </ul>
+                                    <h4>Added and Updated Features</h4>
+                                    <ul class="ul-table">
+                        <li>+ Added Quick Start Package.</li>
+                        <li>+ Added new Theme Pacage without some extensions which be able to conflict with other extensions.</li>
+                        <li>+ Added the product image and product name on the ajax add to cart success popup.</li>
+                        <li>+ Updated featured products list with random featured products list.</li>
+                        <li>+ Added product rating stars into the related products block.</li>
+                                    </ul>
+                                </div>
+                            </section>
+                            <section class="toggle">
+                                <label></i>Porto eCommerce 1.3.0 (2.11.2015)</label>
+                                <div class="toggle-content">
+                                    <h4>Fixed Features</h4>
+                                    <ul class="ul-table">
+                                        <li>- Price Slider URL issue with other ports.</li>
+                                        <li>- Initialize php variables for Prev / Next Products Helper.</li>
+                                        <li>- Showing Shopping Cart Page in Quickview Popup when click "Go To Cartpage" button after added products to the cart on Quickview Popup.</li>
+                                        <li>- Division zero issue in minicart.</li>
+                                        <li>- Move Actions is not working after ajax filter.</li>
+                                        <li>- Quickview popup background issue for boxed version.</li>
+                                        <li>- Colorswatches change product image is not woring on ie 9 on magento 1.9.1.</li>
+                                        <li>- Minor css style issues.</li>
+                                    </ul>
+                                    <h4>Added and Updated Features</h4>
+                                    <ul class="ul-table">
+                                        <li>+ Added Meta Title for Blog.</li>
+                                        <li>+ Added 1280px page maximum width layout.</li>
+                                        <li>+ Added Full width page maximum width layout.</li>
+                                        <li>+ Added 2nd footer middle area.</li>
+                                        <li>+ Added Header Type 11(Full Width).</li>
+                                        <li>+ Added Home Version 13.</li>
+                                        <li>+ Added Home Version 14.</li>
+                                        <li>+ Added Image banner on all pages for full width page layout.</li>
+                                        <li>+ Added Footer newsletter block title configuration.</li>
+                                        <li>+ Added Popular Tags block for footer.</li>
+                                        <li>+ Upgraded Homepage Slider 11.</li>
+                                    </ul>
+                                </div>
+                            </section>
+                            <section class="toggle">
+                                <label></i>Porto eCommerce 1.2.2 (1.30.2015)</label>
+                                <div class="toggle-content">
+                                    <h4>Fixed Features</h4>
+                                    <ul class="ul-table">
+                                        <li>- Blank month number at the blog date ribbon.</li>
+                                        <li>- Doesn't get the correct Latest/Featured/New Products collections.</li>
+                                        <li>- Default value of the except elements and except form ids for Fullpage Ajax.</li>
+                                        <li>- Get the php error message for megamenu if catalog flat category is enabled.</li>
+                                        <li>- Doesn't work additional price for configurable options on Quickview.</li>
+                                        <li>- Broken upsell product block action area styles(add to cart, add to wishlist, add to compare buttons set)  if maximum page width is 1024px.</li>
+                                        <li>- Ajax cart url isn't correct when product has custom options.</li>
+                                        <li>- Footer Top doesn't work if sets it with the custom block.</li>
+                                        <li>- Page scroll is in the bottom of the page after filter by attributes or pagination on Category Page.</li>
+                                        <li>- Configurable swatches doesn't work, after filter by attributes with ajax on Magento 1.9.1.</li>
+                                        <li>- Minor css style issues.</li>
+                                    </ul>
+                                    <h4>Added and Updated Features</h4>
+                                    <ul class="ul-table">
+                                        <li>+ Added Easy Demo Install Module.</li>
+                                        <li>+ Added Header Type 10.</li>
+                                        <li>+ Added Home 12.</li>
+                                        <li>+ Added more Product View Page Config options.</li>
+                                        <li>+ Added custom char sub set option.</li>
+                                        <li>+ Upgraded Home 2 Slider.</li>
+                                        <li>+ Upgraded Home 7 Slider and Color Skin.</li>
+                                        <li>+ Upgraded Home 9 Slider and Color Skin</li>
+                                        <li>+ Upgraded Home 11 Slider.</li>
+                                    </ul>
+                                </div>
+                            </section>
+                            <section class="toggle">
+                                <label></i>Porto eCommerce 1.2.1.1 (1.15.2015)</label>
+                                <div class="toggle-content">
+                                    <h4>Fixed Features</h4>
+                                    <ul class="ul-table">
+                                        <li>- Product Image issue, when product has one image.</li>
+                                        <li>- Qty changer issue on cart page.</li>
+                                        <li>- Shipping Cost Calculator issue on cart page.</li>
+                                        <li>- Minor css style issues.</li>
+                                    </ul>
+                                </div>
+                            </section>
+                            <section class="toggle">
+                                <label></i>Porto eCommerce 1.2.0 (1.14.2015)</label>
+                                <div class="toggle-content" style="display: none;">
+                                    <h4>Fixed Features</h4>
+                                    <ul class="ul-table margin-bottom-20">
+                                        <li>- Qty changer issue for bundle product, when disabled update qty.</li>
+                                        <li>- "No Products" issue, when change the price slider</li>
+                                        <li>- Login and Forgot Password submit button issue for IWD Onepagecheckout extension.</li>
+                                        <li>- Catalog Search Autocomplete style issue.</li>
+                                        <li>- Color Swatche issue on Magento 1.9.1.</li>
+                                        <li>- Minor css style issues.</li>
+                                    </ul>
+                                    <h4>Added and Updated Features</h4>
+                                    <ul class="ul-table">
+                                        <li>+ Added Header Type 9.</li>
+                                        <li>+ Added Homepage 11.</li>
+                                        <li>+ Enable/Disable Catalog Category Search.</li>
+                                        <li>+ Added Compare link in header top links area.</li>
+                                        <li>+ Shipping calculator tab will be opened, after submitted on shopping cart page.</li>
+                                    </ul>
+                                </div>
+                            </section>
+                            <section class="toggle">
+                                <label></i>Porto eCommerce 1.1.2 (1.6.2015)</label>
+                                <div class="toggle-content">
+                                    <h4>Fixed Features</h4>
+                                    <ul class="ul-table margin-bottom-20">
+                                        <li>- Boxed version style issue.</li>
+                                        <li>- Update cart issue on edit cart page.</li>
+                                        <li>- Continue Shopping issue on cart page, after removed items.</li>
+                                        <li>- Page top and bottom white area style issue.</li>
+                                        <li>- Prev/Next Products issue, when enabled flat category.</li>
+                                        <li>- Add to Cart Button issue, if the product is out of stock.</li>
+                                        <li>- Footer Ribbon text setting issue on the Theme Setting page.</li>
+                                    </ul>
+                                    <h4>Added and Updated Features</h4>
+                                    <ul class="ul-table">
+                                        <li>+ Footer Ribbon text setting issue on the Theme Setting page.</li>
+                                        <li>+ Newsletter Popup close button style.</li>
+                                        <li>+ One Static Block(id:porto_fashion_category_banner)</li>
+                                    </ul>
+                                </div>
+                            </section>
+                            <section class="toggle">
+                                <label></i>Porto eCommerce 1.1.1 (12.22.2014)</label>
+                                <div class="toggle-content">
+                                    <h4>Fixed Features</h4>
+                                    <ul class="ul-table margin-bottom-20">
+                                        <li>- Ajaxcart option popup background issue on boxed version with the background.</li>
+                                        <li>- Right corner menu style issue on Sticky Header.</li>
+                                        <li>- Removed '< br />' from error message on ajax cart.</li>
+                                        <li>- Quickview issue, when product has no product image.</li>
+                                        <li>- Quickview script error, when disabled configurable swatches on Magento 1.9.1.</li>
+                                        <li>- Display Out of Stock Products, when set the config "Display Out of Stock Products" in Filterproducts extension.</li>
+                                        <li>- Pager Next/Prev button issue on RTL Version.</li>
+                                    </ul>
+                                    <h4>Added and Updated Features</h4>
+                                    <ul class="ul-table">
+                                        <li>+ Added Previous/Next Product Links on Product View Page.</li>
+                                        <li>+ Added Newsletter Popup.</li>
+                                        <li>+ Updated Homepage 5 Slider.</li>
+                                        <li>+ Updated Homepage 6 Slider.</li>
+                                        <li>+ Updated Homepage 6 Content.</li>
+                                        <li>+ Compitable with IWD_Onepagecheckout Extension.</li>
+                                        <li>+ Compitable with Zeon_Manufacturer Extension.</li>
+                                    </ul>
+                                </div>
+                            </section>
+                            <section class="toggle">
+                                <label></i>Porto eCommerce 1.1.0 (12.17.2014)</label>
+                                <div class="toggle-content">
+                                    <h4>Fixed Features</h4>
+                                    <ul class="ul-table margin-bottom-20">
+                                        <li>- Blank page issue, when there is no product image on the product page.</li>
+                                        <li>- Search box style issue in the header on safari.</li>
+                                        <li>- Full Page Ajax extension issue, after run ajax catalog on the category page.</li>
+                                        <li>- Latest Products list issue on Magento 1.9.1.</li>
+                                    </ul>
+                                    <h4>Added and Updated Features</h4>
+                                    <ul class="ul-table">
+                                        <li>+ Default value of the except elements for Full Page Ajax extension.</li>
+                                        <li>+ Transition effect in the homepage sliders.</li>
+                                        <li>+ Minor styles of the Homepage Sliders and Contents.</li>
+                                        <li>+ It's possible to change the "To Top" icon colors on the admin.</li>
+                                        <li>+ It's possible to add custom menu at the right corner of the menu.</li>
+                                        <li>+ Added Homepage version 9.</li>
+                                    </ul>
+                                </div>
+                            </section>
+                            <section class="toggle">
+                                <label></i>Porto eCommerce 1.0.1 (12.12.2014)</label>
+                                <div class="toggle-content">
+                                    <h4>Fixed Features</h4>
+                                    <ul class="ul-table margin-bottom-20">
+                                        <li>- Product image zoom style issue in the product view page on IE9, IE10.</li>
+                                        <li>- Multiple zoom icon shown issue, while loading page.</li>
+                                        <li>- Mini Search form style issue on mobile browsers.</li>
+                                        <li>- Vertical Menu style issue on Home version 4 and 6, when screen resolution is between 992px and 1200px.</li>
+                                        <li>- The buttons style issue of the Login/Register form in Checkout page on mobile resolution.</li>
+                                        <li>- Category label style issues.</li>
+                                    </ul>
+                                    <h4>Added and Updated Features</h4>
+                                    <ul class="ul-table">
+                                        <li>+ It's possible to show the add to cart button and add to links in the product image area in the catalog grid mode, when mouse over the products.</li>
+                                        <li>+ Added jquery parallax js file with stellar js file, you can use other parallax style.</li>
+                                        <li>+ Enhanced documentation for installation.</li>
+                                    </ul>
+                                </div>
+                            </section>
+                            <section class="toggle">
+                                <label></i>Porto eCommerce 1.0.0 (10.12.2014)</label>
+                            </section>
+                        </div>
+                    </div>
+                    <div id="yujianwenti" class="row">
+                        <div class="col-md-12">
+                            <h2 class="page-title">使用magento1.9遇到的问题</h2>
+                        </div>
+                        <div class="toggle col-md-12 margin-top-0" data-plugin-toggle="">
+                            <section class="toggle active">
+                                <label></i>Porto eCommerce 2.2.0 (4.22.2016)</label>
+                                <div class="toggle-content" style="display: block;">
+                                    <h4>Fixed Features</h4>
+                                    <ul class="ul-table">
+                        <li>- Quickview Extension's security issue.</li>
+                                    </ul>
+                                </div>
+                            </section>
+                            <section class="toggle">
+                                <label></i>Porto eCommerce 2.1.0 (2.6.2016)</label>
+                                <div class="toggle-content">
+                                    <h4>Fixed Features</h4>
+                                    <ul class="ul-table">
+                        <li>- Ajax Filter was not working with configurable swatches.</li>
+                        <li>- Minor CSS Style issues.</li>
+                                    </ul>
+                                </div>
+                            </section>
+                            <section class="toggle">
+                                <label></i>Porto eCommerce 2.0.0.2 (1.13.2016)</label>
+                                <div class="toggle-content">
+                                    <h4>Fixed Features</h4>
+                                    <ul class="ul-table">
+                        <li>- Import CMS sample datas issue.</li>
+                                    </ul>
+                                    <h4>Added and Updated Features</h4>
+                                    <ul class="ul-table">
+                        <li>+ Optimized products list for filterproducts block and category view page.</li>
+                        <li>+ Removed popular tags block from left sidebar.</li>
+                        <li>+ Added toolbar in dailydeal page.</li>
                                     </ul>
                                 </div>
                             </section>
