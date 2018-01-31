@@ -2490,6 +2490,10 @@ ul.nav-main > li.title {
 ul.nav-main > li.title > h6 {
 	margin: 0;
 	cursor: default;
+	color: #eee;
+    font-weight: 700;
+	padding-bottom: 8px !important;
+	border-bottom: 1px solid rgba(238, 238, 238, 0.47) !important;
 }
 
 ul.nav-main > li.title a > h6 {
@@ -17165,4 +17169,16 @@ html.dark .img-thumbnail,
 html.dark .thumbnail {
 	background-color: #21262d;
 	border-color: #282d36;
+}
+
+code {
+    padding: 10px 15px !important;
+    font-size: 90%;
+    color: #c7254e;
+    background-color: #f9f2f4;
+    border-radius: 4px;
+    display: block !important;
+}
+p{
+	margin: 10px 0px !important;
 }

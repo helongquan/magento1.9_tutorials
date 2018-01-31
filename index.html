@@ -164,6 +164,12 @@
                                         </a>
                                     </li>
                                     <li>
+                                        <a href="#magentohoutaicaozuo">
+                                            <i class="fa fa-edit" aria-hidden="true"></i>
+                                            <span>magento后台操作</span>
+                                        </a>
+                                    </li>
+                                    <li>
                                         <a href="#themesettings">
                                             <i class="fa fa-gears" aria-hidden="true"></i>
                                             <span>主题设置面板</span>
@@ -314,19 +320,19 @@
                                             <h4><i class="fa fa-warning"></i> 重要提示!</h4>
                                             确定主题是快速安装包那种还是只是主题安装包，快速安装包是包含了magento系统文件的，简单的说就是包含了整个源码的安装包，这种情况的话，那么直接把这个安装包放在web服务器的根目录下，然后运行安装即可；如果是单纯的主题文件，也就是一个主题而已，那么就要把这个主题文件放在主题该放的目录下，这个目录位置不同的magneto版本事不一样的，这里说的不同的magento版本是指magento1.x和magento2.x的区别.
                                         </div>
-                                        <li>启用缓存</li>
+                                        <li>禁用您的magento中的所有缓存相关部分</li>
                                         <div class="alert alert-warning margin-top-bottom-5">
                                             <h4><i class="fa fa-warning"></i> 重要提示!</h4>
                                             magento的缓存是很重要的，这个跟wordpress很不一样，虽然wordpress也有缓存插件，但是有不一样的理解，当我们安装完了主题后，可能不会马上出现我们想要的效果，这个时候怎么办，虽然还没有立即生效有很多原因，但是很多时候是我们没有清除缓存，我们可以在magento后台找到缓存管理，然后清除缓存，然后再次查看.
                                         </div>
-                                        <li>上传主题文件，如果我们在本地服务器调试那么只需要把文件放在.(refer Next Part <b>Theme Files Upload</b>)</li>
-                                        <li>Disable compilation mode in System > Tools > Compilation.</li>
-                                        <li>Disable all cache related section that you have in your magento.</li>
+                                        <li>上传主题文件，如果我们在本地服务器调试那么只需要把文件放在本地web服务器的根目录即可</li>
+                                        <li>备份magento文件和商店数据库。如果你是第一次使用magento的话，需要这样做，这样比较安全，万一出错了可以恢复</li>
                                         <div class="alert alert-warning margin-top-bottom-5">
-                                            <h4><i class="fa fa-warning"></i> Important!</h4>
-                                            To apply the your changes working, you should disable or clear all of cache related sections, such as magento default cache, magento cache extension or CDN etc. The best choice is to disable all of them and enable it after you finish your work.
+                                            <h4><i class="fa fa-warning"></i> 重要提示!</h4>
+                                            <p>首先也是最简单的方法就是从Magento下载页面下载，https://www.magentocommerce.com/download</p>
+                                            <p>在这个安装中，Magento核心代码存储在/vendor目录下，通过Magento管理员可以更新。</p>
+                                            <p>所以接下来的步骤很简单，只需要通过服务器的方式访问这个目录所在的文件，就可以进行安装</p>
                                         </div>
-                                        <li>Log out from magento admin panel and log in again. Its essential to Logout/Login again to refresh your control panel.</li>
                                     </ol>
                                 </div>
                             </section>
@@ -335,34 +341,76 @@
                         <div class="col-md-12">
                             <section class="panel panel-featured panel-featured-primary">
                                 <header class="panel-heading">
-                                    <h2 class="panel-title">Theme Files Upload</h2>
+                                    <h2 class="panel-title">主题文件上传</h2>
                                 </header>
                                 <div class="panel-body">
                                     <div class="tabs col-md-12 margin-0 padding-0">
                                         <ul class="nav nav-tabs">
                                             <li class="active">
-                                                <a href="#ftp" data-toggle="tab" aria-expanded="true">Upload via FTP</a>
+                                                <a href="#ftp" data-toggle="tab" aria-expanded="true">通过Composer安装</a>
                                             </li>
                                             <li class="">
-                                                <a href="#cpanel" data-toggle="tab" aria-expanded="false">Upload via CPanel</a>
+                                                <a href="#cpanel" data-toggle="tab" aria-expanded="false">通过GitHub安装</a>
                                             </li>
                                         </ul>
                                         <div class="tab-content">
                                             <div id="ftp" class="tab-pane active">
                                                 <ol>
-                                                    <li>Log into your hosting space via a FTP software. ie, FileZilla</li>
-                                                    <li>Unzip <bold>Theme Package > Theme Files > Porto Theme.zip</bold> and upload all directories(There are 5 directories - app, js, lib, media and skin) to magento root directory.</li>
-                                                    <li>If you're not using configurable swatches, skip this step. If you're using Magento 1.9.1 above and you're going to use the configurable swatches, please do same step for <bold>Theme Package > Theme Files > Porto Theme(patch for Configurable Swatches).zip</bold> file. It includes 2 directories - app and skin, and it will overwrite preuploaded files.</li>
-                                                    <li>If you're using Magento 1.9.2, please do same step for <bold>Theme Package > Theme Files > Porto Theme(patch for Magento 1.9.2).zip</bold> file. It includes 1 directory - app, and it will overwrite preuploaded files.</li>
+                                                    <li>其次，但不是最后的方案，通过Composer安装Magento。Composer是PHP中依赖管理的工具。要了解更多信息，请访问这个链接https://getcomposer.org/doc/00-intro.md。</li>
+                                                    <li>以这个方式安装，Magento核心代码也存储在/vendor目录下，通过Magento管理员可以更新。</li>
+                                                    <li>首先你需要在<a href="https://marketplace.magento.com/customer/account/">这里</a>可以获得的认证密钥，你需要Magento帐号登录。</li>
+                                                    <li>登录后，进入“My Access Keys”，输入一些描述性的“名称”，并生成一组新的密钥。Magento使用这种方法，因为将来，通过Magento管理界面，您可以从Marketplace购买扩展程序。</li>
+                                                    <li>在终端输入这个命令：<br><code>composer create-project --repository-url=https://repo.magento.com/ magento/project-community-edition</code></li>
                                                 </ol>
+                                                <p>出现提示时，您的公钥是用户名，私钥是密码。之后，Magento准备安装。通过安装向导并安装它。这是没有样本数据。因此，要安装示例数据，请通过终端导航到您的Magento 2根目录，然后运行以下命令：</p>
+                                                <p><code>
+                                                    php bin/magento sampledata:deploy<br>
+                                                    php bin/magento setup:upgrade
+                                                </code></p>
+                                                <p>这两个命令将更新您的composer.json文件并安装示例数据。如果在安装示例数据后收到此消息，请Please re-run Magento compile command在终端中输入以下内容：</p>
+                                                <p><code>
+                                                    php bin/magento setup:di:compile
+                                                </code></p>
+                                                <p>这个过程可能需要一些时间才能完成。</p>
                                             </div>
                                             <div id="cpanel" class="tab-pane">
-                                                <ol>
-                                                    <li>Log into your CPanel(Control Panel) by your hosting account or cpanel user information.</li>
-                                                    <li>Upload <bold>Theme Package > Theme Files > Porto Theme.zip</bold> to your magento root directory and unzip its content. </li>
-                                                    <li>If you're not using configurable swatches, skip this step. If you're using Magento 1.9.1 or above and you're going to use the configurable swatches, please do same step for <bold>Theme Package > Theme Files > Porto Theme(patch for Configurable Swatches).zip</bold> file. It may ask for overwritting files, please choose "Yes".</li>
-                                                    <li>If you're using Magento 1.9.2, please do same step for <bold>Theme Package > Theme Files > Porto Theme(patch for Magento 1.9.2).zip</bold> file. It may ask for overwritting files, please choose "Yes".</li>
-                                                </ol>
+                                                <div>
+                                                    <p>第三，也是最后一个，是从GitHub仓库克隆或下载版本。</p>
+                                                    <p>在这个安装中，我会告诉你如何避免设置向导，并通过终端安装Magento。但是，它一提的是在此安装Magento的核心代码存储下是非常重要的app/code不是vendor/像前面的两个例子。</p>
+                                                    <p>当您尝试通过管理界面更新Magento时，您会收到错误信息，表示这是GitHub版本，无法更新。GitHub的发布版本打算供贡献者/开发者使用。</p>
+                                                    <p>首先，我们必须从这里克隆Magento回购：https：//github.com/magento/magento2或者你可以在https://github.com/magento/magento2/releases下载发布</p>
+                                                    <p>创建空目录并运行：</p>
+                                                    <pre><code>git clone git@github.com:magento/magento2.git .</code></pre>
+
+                                                    <p>部署完成后，运行：</p>
+                                                    <pre><code>composer install</code></pre>
+
+                                                    <p>现在是时候安装Magento 2.我的设置如下所示：</p>
+                                                    <pre><code>php -f bin/magento setup:install –base-url=http://m2.loc/2.07/github/ --backend-frontname=admin --db-host=localhost --db-name=m2git --db-user=root --db-password=inchoo --admin-firstname=Magento --admin-lastname=User --admin-email=ivan.veres@inchoo.net --admin-user=admin --admin-password=magento123 --language=en_US --currency=USD --timezone=America/Chicago –use-rewrites=1</code></pre>
+
+                                                    <p>更改您的基地址，数据库名称，数据库密码，管理员电子邮件，管理员密码，以符合您的本地设置。</p>
+                                                    <p>如果你通过浏览器访问本地链接（http://localhost/magento2），这里假设安装Magento2。</p>
+                                                    <p>如果您需要样本数据，请继续。</p>
+                                                    <p>在你的web根目录（不是magento2）中运行：</p>
+                                                    <pre><code>git clone git@github.com:magento/magento2-sample-data.git</code></pre>
+
+                                                    <p>导航到克隆的目录并执行：</p>
+                                                    <pre><code>php -f dev/tools/build-sample-data.php -- --ce-source=&quot;your Magento CE install dir&quot;</code></pre>
+
+                                                    <p>这将创建符号链接到您的Magento 2安装。</p>
+                                                    <p>如果您在Linux机器上，请设置所有权和权限：</p>
+                                                    <pre><code>chown -R :your web server group name<br>find . -type d -exec chmod g+ws {} \;</code></pre>
+
+                                                    <p>那么你需要清除静态文件（缓存）。</p>
+                                                    <p>导航到Magento 2 var/文件夹并输入以下内容：</p>
+                                                    <pre><code>rm -rf cache/* page_cache/* generation/*</code></pre>
+
+                                                    <p>在Magento 2文档中没有进一步的说明。但是，您需要安装示例数据。</p>
+                                                    <pre><code>php bin/magento setup:upgrade<br>php bin/magento setup:di:compile</code></pre>
+
+                                                    <p>之后，你应该安装示例数据。</p>
+                                                    <p>如果您在http://devdocs.magento.com/guides/v2.0/install-gde/bk-install-guide.html有一些问题的参考。</p>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
@@ -1249,6 +1297,177 @@
                     <div id="themedesign" class="row">
                         <div class="col-md-12">
                             <h2 class="page-title">Porto - Design Panel</h2>
+                        </div>
+                        <div class="col-md-12">
+                            <section class="panel panel-featured panel-featured-primary">
+                                <header class="panel-heading">
+                                    <h2 class="panel-title">About Porto Design Panel</h2>
+                                </header>
+                                <div class="panel-body">
+                                    <p>
+                                        Porto eCommerce is equipped with administrative module which gives you the ability to configure the visual appearance of your store. You can change any colors for each elements by using color pirckers or by specifying color value manually. You can also apply textures(patterns) for the main sections of the page.<br/>
+                                        Go to System Configuration > Porto > Porto Design Panel section to start your own design configuration. Names of all settings are pretty self-explanatory.
+                                    </p>
+                                    <div class="alert alert-warning margin-top-bottom-5">
+                                        <h4><i class="fa fa-warning"></i> Note!</h4>
+                                        We recommend you to disable magento cache before you start configuration in Porto Design Panel. Otherwise, you will need to flush the cache everytime to see your changes..
+                                    </div>
+                                </div>
+                            </section>
+                        </div>
+
+                        <div class="col-md-12">
+                            <section class="panel panel-featured panel-featured-primary">
+                                <header class="panel-heading">
+                                    <h2 class="panel-title">General</h2>
+                                </header>
+                                <div class="panel-body">
+                                    <h4 class="text-primary">Theme Colors</h4>
+                                    <p>In this option, you can set main color of entire store, and you can apply specific color settings in below options.</p>
+                                </div>
+                            </section>
+                        </div>
+
+                        <div class="col-md-12">
+                            <section class="panel panel-featured panel-featured-primary">
+                                <header class="panel-heading">
+                                    <h2 class="panel-title">Colors</h2>
+                                </header>
+                                <div class="panel-body">
+                                    <img class="col-md-6 left padding-0 margin-right-10 grey-border-1" src="assets/images/design-1.png"/>
+                                    <h4 class="text-primary">Custom</h4>
+                                    <p>Choose "Yes" to start your own color configuration in detail.</p>
+                                    
+                                    <h4 class="text-primary">Basic Colors</h4>
+                                    <p>
+                                        In these options, you can set color values for general elements - text, link and link hover color.
+                                    </p>
+
+                                    <h4 class="text-primary">Buttons</h4>
+                                    <p>
+                                        In these options, you can set color values for buttons in detail - background, text, background hover and text hover colors.
+                                    </p>
+
+                                    <h4 class="text-primary">Add to links</h4>
+                                    <p>
+                                        In these options, you can set color values for Add to Links - "Add to Wishlist", "Add to Compare" and "Quick View"(category page list mode only).
+                                    </p>
+
+                                    <h4 class="text-primary">Product Labels</h4>
+                                    <p>
+                                        Porto eCommerce introduces "New" and "Sale" label for new and sale products that appears inside product image. You can set color values for those labels here.
+                                    </p>
+
+                                    <h4 class="text-primary">Category Labels</h4>
+                                    <p>
+                                        Porto eCommerce introduces category labels such as "New" or "Hot" that you can see in the menu on our demo sites. You can set color options for those category labels here. To manage those label names, please check <span class="text-primary">Smartwave Extensions > Megamenu > Category Labels</span>.
+                                    </p>
+                                </div>
+                            </section>
+                        </div>
+
+                        <div class="col-md-12">
+                            <section class="panel panel-featured panel-featured-primary">
+                                <header class="panel-heading">
+                                    <h2 class="panel-title">Font</h2>
+                                </header>
+                                <div class="panel-body">
+                                    <img class="col-md-6 left padding-0 margin-right-10 grey-border-1" src="assets/images/design-2.png"/>
+                                    <h4 class="text-primary">Custom</h4>
+                                    <p>Choose "Yes" to start your own color configuration in detail.</p>
+                                    <h4 class="text-primary"></h4>
+                                    <p>
+                                        
+                                    </p>
+                                    <h4 class="text-primary"></h4>
+                                    <p>
+                                        
+                                    </p>
+                                    <h4 class="text-primary"></h4>
+                                    <p>
+                                        
+                                    </p>
+                                </div>
+                            </section>
+                        </div>
+
+                        <div class="col-md-12">
+                            <section class="panel panel-featured panel-featured-primary">
+                                <header class="panel-heading">
+                                    <h2 class="panel-title">Header</h2>
+                                </header>
+                                <div class="panel-body">
+                                    <img class="col-md-6 left padding-0 margin-right-10 grey-border-1" src="assets/images/design-3.png"/>
+                                    <h4 class="text-primary">Custom</h4>
+                                    <p>Choose "Yes" to start your own color configuration in detail.</p>
+                                    <h4 class="text-primary">Color Settings</h4>
+                                    <p>
+                                        In these options, you can set color values for each elements inside header area in detail. Attached a screenshot to make you easy to understand.
+                                    </p>
+                                </div>
+                            </section>
+                        </div>
+
+                        <div class="col-md-12">
+                            <section class="panel panel-featured panel-featured-primary">
+                                <header class="panel-heading">
+                                    <h2 class="panel-title">Footer</h2>
+                                </header>
+                                <div class="panel-body">
+                                    <img class="col-md-6 left padding-0 margin-right-10 grey-border-1" src="assets/images/design-4.png"/>
+                                    <h4 class="text-primary">Custom</h4>
+                                    <p>Choose "Yes" to start your own color configuration in detail.</p>
+                                    <h4 class="text-primary">Color Settings</h4>
+                                    <p>
+                                        In these options, you can set color values for each elements inside header area in detail. Attached a screenshot to make you easy to understand.
+                                    </p>
+                                </div>
+                            </section>
+                        </div>
+
+                        <div class="col-md-12">
+                            <section class="panel panel-featured panel-featured-primary">
+                                <header class="panel-heading">
+                                    <h2 class="panel-title">Page</h2>
+                                </header>
+                                <div class="panel-body">
+                                    <img class="col-md-6 left padding-0 margin-right-10 grey-border-1" src="assets/images/design-5.png"/>
+                                    <h4 class="text-primary">Custom</h4>
+                                    <p>Choose "Yes" to start your own color configuration in detail.</p>
+
+                                    <h4 class="text-primary">Background Color</h4>
+                                    <p>You can set page background color that will be applied for all pages.</p>
+                                    <h4 class="text-primary">Background Image</h4>
+                                    <p>You can set page background image that will be applied for all pages.</p>
+                                    <h4 class="text-primary">Custom Style</h4>
+                                    <p>You can add your own custom style for background. For example, background-position: center center; background-repeat: no-repeat; etc.</p>
+                                </div>
+                            </section>
+                        </div>
+
+                        <div class="col-md-12">
+                            <section class="panel panel-featured panel-featured-primary">
+                                <header class="panel-heading">
+                                    <h2 class="panel-title">Main Container</h2>
+                                </header>
+                                <div class="panel-body">
+                                    <img class="col-md-6 left padding-0 margin-right-10 grey-border-1" src="assets/images/design-6.png"/>
+                                    <p>You can set color options for main container only, compared to above page settings - it means the main content part except header and footer area from entire page.</p>
+                                    <h4 class="text-primary">Custom</h4>
+                                    <p>Choose "Yes" to start your own color configuration in detail.</p>
+                                    <h4 class="text-primary">Background Color</h4>
+                                    <p>You can set page background color that will be applied for all pages.</p>
+                                    <h4 class="text-primary">Background Image</h4>
+                                    <p>You can set page background image that will be applied for all pages.</p>
+                                    <h4 class="text-primary">Custom Style</h4>
+                                    <p>You can add your own custom style for background. For example, background-position: center center; background-repeat: no-repeat; etc.</p>
+                                </div>
+                            </section>
+                        </div>
+                    </div>
+                    <div id="magentohoutaicaozuo" class="row">
+                        <div class="col-md-12">
+                            <h2 class="page-title">magento后台操作</h2>
                         </div>
                         <div class="col-md-12">
                             <section class="panel panel-featured panel-featured-primary">
